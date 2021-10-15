@@ -568,9 +568,9 @@ hi! link lCursor Cursor
 " Syntax Highlighting: {{{
 
 if g:gruvbox_improved_strings == 0
-  hi! link Special GruvboxOrange
+  hi! link Special GruvboxRedBold
 else
-  call s:HL('Special', s:orange, s:bg1, s:italicize_strings)
+  call s:HL('Special', s:red, s:bg1, s:italicize_strings)
 endif
 
 call s:HL('Comment', s:gray, s:none, s:italicize_comments)
@@ -578,57 +578,57 @@ call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
 
 " Generic statement
-hi! link Statement GruvboxRed
+hi! link Statement GruvboxPurple
 " if, then, else, endif, swicth, etc.
-hi! link Conditional GruvboxRed
+hi! link Conditional GruvboxPurple
 " for, do, while, etc.
-hi! link Repeat GruvboxRed
+hi! link Repeat GruvboxPurple
 " case, default, etc.
-hi! link Label GruvboxRed
+hi! link Label GruvboxPurple
 " try, catch, throw
-hi! link Exception GruvboxRed
+hi! link Exception GruvboxPurple
 " sizeof, "+", "*", etc.
 hi! link Operator Normal
 " Any other keyword
-hi! link Keyword GruvboxRed
+hi! link Keyword GruvboxPurple
 
 " Variable name
-hi! link Identifier GruvboxBlue
+hi! link Identifier GruvboxOrange
 " Function name
-hi! link Function GruvboxGreenBold
+hi! link Function GruvboxBlueBold
 
 " Generic preprocessor
-hi! link PreProc GruvboxAqua
+hi! link PreProc GruvboxPurple
 " Preprocessor #include
-hi! link Include GruvboxAqua
+hi! link Include GruvboxPurple
 " Preprocessor #define
-hi! link Define GruvboxAqua
+hi! link Define GruvboxPurple
 " Same as Define
-hi! link Macro GruvboxAqua
+hi! link Macro GruvboxPurple
 " Preprocessor #if, #else, #endif, etc.
-hi! link PreCondit GruvboxAqua
+hi! link PreCondit GruvboxPurple
 
 " Generic constant
-hi! link Constant GruvboxPurple
+hi! link Constant GruvboxRed
 " Character constant: 'c', '/n'
-hi! link Character GruvboxPurple
+hi! link Character GruvboxRed
 " String constant: "this is a string"
 if g:gruvbox_improved_strings == 0
-  call s:HL('String',  s:green, s:none, s:italicize_strings)
+  call s:HL('String',  s:aqua, s:none, s:italicize_strings)
 else
   call s:HL('String',  s:fg1, s:bg1, s:italicize_strings)
 endif
 " Boolean constant: TRUE, false
-hi! link Boolean GruvboxPurple
+hi! link Boolean GruvboxRed
 " Number constant: 234, 0xff
-hi! link Number GruvboxPurple
+hi! link Number GruvboxRed
 " Floating point constant: 2.3e10
-hi! link Float GruvboxPurple
+hi! link Float GruvboxRed
 
 " Generic type
-hi! link Type GruvboxYellow
+hi! link Type GruvboxGreen
 " static, register, volatile, etc
-hi! link StorageClass GruvboxOrange
+hi! link StorageClass GruvboxGreen
 " struct, union, enum, etc.
 hi! link Structure GruvboxAqua
 " typedef
@@ -1029,20 +1029,20 @@ hi! link cStructure GruvboxOrange
 " }}}
 " Python: {{{
 
-hi! link pythonBuiltin GruvboxOrange
-hi! link pythonBuiltinObj GruvboxOrange
-hi! link pythonBuiltinFunc GruvboxOrange
-hi! link pythonFunction GruvboxAqua
-hi! link pythonDecorator GruvboxRed
+hi! link pythonBuiltin GruvboxGreen
+hi! link pythonBuiltinObj GruvboxGreen
+hi! link pythonBuiltinFunc GruvboxGreenBold
+hi! link pythonFunction GruvboxBlue
+hi! link pythonDecorator GruvboxPurpleBold
 hi! link pythonInclude GruvboxBlue
 hi! link pythonImport GruvboxBlue
 hi! link pythonRun GruvboxBlue
 hi! link pythonCoding GruvboxBlue
-hi! link pythonOperator GruvboxRed
+hi! link pythonOperator GruvboxBlueSign
 hi! link pythonException GruvboxRed
 hi! link pythonExceptions GruvboxPurple
-hi! link pythonBoolean GruvboxPurple
-hi! link pythonDot GruvboxFg3
+hi! link pythonBoolean GruvboxOrangeBold
+hi! link pythonDot GruvboxFg4
 hi! link pythonConditional GruvboxRed
 hi! link pythonRepeat GruvboxRed
 hi! link pythonDottedName GruvboxGreenBold
